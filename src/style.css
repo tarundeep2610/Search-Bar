@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 .container{
-    max-width: 70vw;
+    max-width: 70%;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -94,7 +94,6 @@
     background-color: white;
     box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.39);
     border: none;
-    /* padding: 1rem; */
 }
 
 .suggestion-container{
@@ -114,13 +113,19 @@
     width: 2.5rem;
 }
 
-.suggestion-container .name{
+.fields{
+    display: flex;
+    flex-direction: row;
+    min-width: calc(100% - 2.5rem);
+}
+
+.suggestion-container .fields .name{
     margin: 0 .5rem;
     overflow: hidden;
     min-width: 35%;
     font-weight: bolder;
 }
-.suggestion-container .mail{
+.suggestion-container .fields .mail{
     overflow: hidden;
     min-width: 40%;
     color: rgb(12, 12, 12);
@@ -139,5 +144,42 @@
     border-radius: 3rem;
     margin-right: .4rem;
     background-color: gray;
-    /* outline: 1px solid ; */
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .suggestions-container {
+        width: auto;
+        min-width: 13rem;
+        max-width: 35rem;
+    }
+
+    .suggestion-container {
+        padding: .6rem;
+    }
+
+    .fields{
+        flex-direction: column;
+        padding-left: .5rem;
+    }
+
+    .suggestion-container .fields .name {
+        margin: 0;
+        overflow: hidden;
+        min-width: 100%;
+        font-weight: bolder;
+    }
+
+    .suggestion-container .fields .mail {
+        overflow: hidden;
+        min-width: 100%;
+        color: rgb(12, 12, 12);
+    }
+
+    .dp{
+        width: 1.9rem;
+    }
 }

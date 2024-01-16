@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import SearchBar from './components/SearchBar';
 import User from './components/User';
 import Suggestion from './components/Suggestion';
@@ -6,7 +6,6 @@ import {userData} from './data';
 
 
 function App() {
-  console.log(userData);
   const [users,setUsers] = useState(userData);
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
